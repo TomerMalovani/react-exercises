@@ -1,0 +1,31 @@
+
+.Mainbox{
+    border: 2px solid black;
+    height: 300px;
+    width: 300px;
+    display: flex;
+   flex-direction: column;
+}
+
+.header{
+    font-size: 1em;
+    font-weight: 5px;
+}
+
+.secondHeader{
+    font-size: 0.5em;
+    
+}
+
+.Q1Input{
+    width: 30px;
+}
+
+.QuizTitles{
+    font-size: 1em;
+    font-weight: 5px;
+}
+
+.Quiz{
+
+}
