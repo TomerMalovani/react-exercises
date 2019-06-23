@@ -1,3 +1,18 @@
 body {
     background: thistle;
+    height: 100vh;
+}
+
+.page{
+    height: 100%v;
+}
+
+.Box{
+    height: 50px;
+    width: 80px;
+    border: 2px solid black;
+}
+
+.button{
+    width: 100%;
 }
