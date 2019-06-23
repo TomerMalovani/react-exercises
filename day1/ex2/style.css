@@ -1,3 +1,106 @@
 body {
-    background: thistle;
+    background: #ef7d73;
+    
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
 }
+
+.Page{
+   width: 100vw;
+    height: 100vh;
+}
+
+.Menu{
+    background-color: #fff;
+    width: 100%;
+    height: 7%;
+     display: flex;
+     align-items: center;
+     padding-left: 3%;
+}
+
+.Menubar{
+  display: flex;
+  list-style: none;
+  margin: 0;
+  
+}
+
+.Bar{
+    margin-right: 30px;
+}
+
+.MainBody{
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Header{
+   margin-top: 3%; 
+   width: 50%;
+   height: 30%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.HeaderTitle{
+    color: white;
+    margin: 0;
+    font-size: 5em;
+}
+
+.HeaderText{
+    color: white;
+}
+
+.PicPart{
+    height: 60%;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+
+.Img{
+      height: 200px;
+    width: 200px;
+    border-radius: 100px;
+   
+    margin: 30px;
+    
+    background-position: center;
+}
+
+.Three{
+      background-image: url(./img/icon3.png);
+}
+
+.Two{
+background-image: url(./img/icon2.jpg);
+}
+
+.One{
+background-image: url(./img/icon1.jpg);
+}
+
+.Col{
+    height: 100%;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 5px;
+}
+
+.SubTxt{
+    color: white;
+    padding: 20px;
+    
+}
+
