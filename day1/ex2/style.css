@@ -20,7 +20,7 @@ body {
      padding-left: 3%;
 }
 
-.Menubar{
+.Menu{
   display: flex;
   list-style: none;
   margin: 0;
@@ -29,6 +29,14 @@ body {
 
 .Bar{
     margin-right: 30px;
+}
+
+.hoverText{
+     font-weight:bold; 
+}
+
+.hoverP{
+    border: 2px solid white;
 }
 
 .MainBody{
@@ -86,6 +94,36 @@ background-image: url(./img/icon2.jpg);
 
 .One{
 background-image: url(./img/icon1.jpg);
+}
+
+.One_hover{
+    border: 2px solid black;
+         height: 200px;
+    width: 200px;
+    border-radius: 100px;
+    margin: 30px;
+    background-image: url(./img/icon1.jpg);
+    background-position: center;
+}
+
+.Two_hover{
+    border: 2px solid black;
+         height: 200px;
+    width: 200px;
+    border-radius: 100px;
+    margin: 30px;
+    background-image: url(./img/icon2.jpg);
+    background-position: center;
+}
+
+.Three_hover{
+    border: 2px solid black;
+         height: 200px;
+    width: 200px;
+    border-radius: 100px;
+    margin: 30px;
+    background-image: url(./img/icon3.png);
+    background-position: center;
 }
 
 .Col{
