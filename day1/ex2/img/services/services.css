@@ -1,0 +1,121 @@
+body {
+    background: salmon;
+    margin: 0;
+}
+.menu {
+    height: 60px;
+    text-align: center;
+    font-family: sans-serif;
+    background: whitesmoke;
+    display: flex;
+    align-items: center;
+}
+.menu span {
+    padding: 10px;
+    font-size: 12px;
+}
+.menu img {
+    width: 60px;
+    position: absolute;
+    right: 30px;
+}
+.menu div {
+    position: absolute;
+    right: 30px;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+   background-position: center;
+    background-size: contain;
+    background-image: url("https://png.pngtree.com/element_origin_min_pic/17/09/19/86985f3cbfd0c2f42a83895cea81841d.jpg");
+}
+h1 {
+    color: white;
+    text-align: center;
+}
+.title {
+    color: white;
+    text-align: center;
+}
+.title p {
+    padding: 50px;
+    padding-top: 20px;
+    width: 60%;
+    margin: auto;
+    max-width: 470px;
+}
+
+.title div {
+    font-family: monospace;
+}
+
+.title h5{
+    padding: 10px;
+    box-sizing: border-box;
+    border: solid transparent;
+}
+#services {
+    text-align: center;
+}
+.service {
+    text-align: center;
+    display: inline-block;
+    padding: 0 15px;
+    vertical-align: top;
+}
+.service .title {
+    max-width: 180px;
+}
+.icon-wrapper {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: antiquewhite;
+    margin: auto;
+}
+.service img{
+    width: 100px;
+    position: absolute;
+    top: calc(50% - 50px);
+    left: calc(50% - 50px);
+}
+
+.service:hover .free-text{
+    text-align: left;
+    color: #8e2c21;
+    font-size: 11px;
+    background: white;
+    padding: 5px;
+    border-radius: 4px;
+}
+.blue {
+    background: lightskyblue;
+}
+.green {
+    background: cadetblue;
+}
+.lilac {
+    background: thistle;
+}
+
+/*************/
+
+.blue.strong {
+    background: royalblue;
+}
+.green.strong {
+    background: mediumseagreen;;
+}
+.lilac.strong {
+    background: plum;
+}
+
+.selected {
+    font-weight: bold;
+}
+
+.title h5.border {
+    border-color: white;
+}
