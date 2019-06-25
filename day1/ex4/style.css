@@ -1,3 +1,36 @@
 body {
     background: thistle;
 }
+
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.firstBox{
+    height: 300px;
+    width: 450px;
+    background-color: rgb(165, 238, 70);
+   
+}
+
+.SecBox{
+    height: 280px;
+    width: 430px;
+    background-color: rgb(247, 99, 247);
+}
+
+.ThirdBox{
+    height: 260px;
+    width: 410px;
+    background-color: rgb(94, 235, 235);
+    flex-direction: column;
+}
+
+.DualBox{
+    height:100px;
+    width: 180px;
+    background-color: rgb(165, 11, 11);
+    margin: 3px;
+}
