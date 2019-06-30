@@ -1,41 +1,28 @@
 
 class App extends React.Component {
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
         this.state = {
-            ColorClass: "white"
+            ColorClass: ""
         }
-        this.turnGreen = this.turnGreen.bind(this);
-        this.turnRed = this.turnRed.bind(this);
-        this.turnPurple = this.turnPurple.bind(this);
+        // this.turnGreen = this.turnGreen.bind(this);
+        // this.turnRed = this.turnRed.bind(this);
+        // this.turnPurple = this.turnPurple.bind(this);
+        this.picker = this.picker.bind(this);
     }
-    turnGreen() {
+
+    picker(event) {
         this.setState({
-            ColorClass: "green"
+            ColorClass: event.target.textContent
         });
     }
-
-    turnRed() {
-        this.setState({
-            ColorClass: "red"
-        });
-    }
-
-
-    turnPurple() {
-        this.setState({
-            ColorClass: "purple"
-        });
-    }
-
-
     render() {
         return (
             <div>
-                <button onClick={this.turnGreen}>green</button>
-                <button onClick={this.turnRed}>red</button>
-                <button onClick={this.turnPurple}>purple</button>
-                <div className={"box " + this.state.ColorClass}></div>
+                <button onClick={this.picker}>green</button>
+                <button onClick={this.picker}>red</button>
+                <button onClick={this.picker}>purple</button>
+                <div className={`box ${this.state.ColorClass}`}></div>
             </div>
         );
     }
