@@ -1,0 +1,55 @@
+body {
+    background: thistle;
+}
+
+.Box{
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxOne{
+    height: 100px;
+    width: 100px;
+}
+
+
+.boxTwo{
+      height: 80px;
+    width: 80px;
+}
+
+.boxThree{
+     height: 60px;
+    width: 60px;
+}
+
+.boxFour{
+     height: 30px;
+    width: 30px;
+}
+
+.white{
+     background-color: rgb(255, 255, 255);
+}
+
+.black{
+   
+    background-color: rgb(2, 2, 2);
+}
+
+.pink{
+    
+      background-color: rgb(253, 150, 150);
+}
+
+.yellow{
+     
+     background-color: rgb(229, 255, 0);
+}
+
+.green{
+      background-color: rgb(37, 128, 1);
+}
+
