@@ -4,6 +4,7 @@ class Btn extends React.Component {
         this.childChange = this.childChange.bind(this);
     }
     childChange() {
+        console.log(this.props.color);
         this.props.changeColor(this.props.color);
     }
     render() {
@@ -29,7 +30,7 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                <Btn color="blue" changeColor={this.Changeclr} />
+                <Btn color="blueasthesea" changeColor={this.Changeclr} />
                 <Btn color="green" changeColor={this.Changeclr} />
                 <Btn color="red" changeColor={this.Changeclr} />
                 <div className={"box " + this.state.Color}></div>
