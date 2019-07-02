@@ -1,0 +1,21 @@
+body {
+    background: thistle;
+}
+
+.Box{
+    height: 50px;
+    width: 50px;
+    background-color: red;
+    position: absolute;
+    left: 0;
+}
+
+.move{
+    animation-name: mymove;
+    animation-duration: 2s;
+}
+
+@keyframes mymove {
+  from {left: -50px;}
+  to {left: 0px;}
+}
