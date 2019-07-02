@@ -1,0 +1,28 @@
+body {
+ background: thistle;
+}
+
+.box {
+ height: 300px;
+ width: 400px;
+}
+
+.red {
+ background-color: rgb(241, 134, 134);
+}
+
+.yellow {
+ background-color: rgb(240, 240, 101);
+}
+
+.green {
+ background-color: rgb(107, 226, 107);
+}
+
+.blue {
+ background-color: rgb(140, 140, 226);
+}
+
+.circle{
+    border-radius: 50%;
+}
