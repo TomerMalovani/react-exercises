@@ -1,3 +1,16 @@
+class Donelist extends React.Component {
+    render() {
+        return (
+            <div className="ListWrap">
+                <ul className="Mainlist">
+                    {this.props.Listdone}
+                </ul>
+            </div>
+        );
+    }
+}
+
+
 class List extends React.Component {
     render() {
         return (
@@ -53,35 +66,63 @@ class App extends React.Component {
 
         this.state = {
             List: [],
+            Donelist: [],
             count: 0,
+            countDone: 0,
             isDone: ""
         }
         this.AddTask = this.AddTask.bind(this);
         this.DeleteTask = this.DeleteTask.bind(this);
         this.MarkAsDone = this.MarkAsDone.bind(this);
+        this.MarkasNotdone = this.MarkasNotdone.bind(this);
+        this.DeleteDoneTask = this.DeleteDoneTask.bind(this);
+
+    }
+
+    MarkasNotdone(event) {
+        console.log(event.target.firstChild.innerHTML);
+        this.AddTask(event.target.firstChild.innerHTML)
+        event.target.remove();
     }
 
     MarkAsDone(e) {
-        console.log("hey its working")
-        e.target.classList.add("DoneTask");
+        console.log(e.target.firstChild.textcontent);
+        this.setState({
+            countDone: this.state.countDone + 1,
+            Donelist: [...this.state.Donelist, <div> <li onClick={this.MarkasNotdone} className="listItem DoneTask" key={"done" + this.state.countDone}><span className="TaskText">{e.target.firstChild.innerHTML}</span><button className="removeBtn" onClick={this.DeleteDoneTask}>x</button></li></div >]
+        });
+        e.target.remove();
     }
+
 
     AddTask(newTask) {
 
         this.setState({
-            List: [...this.state.List, <li onClick={this.MarkAsDone} className="listItem" key={this.state.count}>{newTask}<button className="removeBtn" onClick={this.DeleteTask}>x</button></li>],
+            List: [...this.state.List, <div><li onClick={this.MarkAsDone} className="listItem" key={this.state.count}><span className="TaskText">{newTask}</span><button className="removeBtn" onClick={this.DeleteTask}>x</button></li></div>],
             count: this.state.count + 1
         });
-        console.log(this.state.List);
+
     }
     DeleteTask(e) {
+        console.log(e.target.parentNode);
         e.target.parentNode.remove();
+        this.setState({
+            count: this.state.count + 1
+        });
+    }
+
+    DeleteDoneTask(e) {
+        e.target.parentNode.remove();
+        this.setState({
+            countDone: this.state.countDone + 1
+        });
     }
     render() {
         return (
             <div className="Main">
                 <Input TaskAdder={this.AddTask} />
                 <List list={this.state.List} />
+                <Donelist Listdone={this.state.Donelist} />
             </div>
         );
     }
