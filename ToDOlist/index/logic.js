@@ -2,6 +2,7 @@ class Donelist extends React.Component {
     render() {
         return (
             <div className="ListWrap">
+                <div className="ToDoHeader">completed:</div>
                 <ul className="Mainlist">
                     {this.props.Listdone}
                 </ul>
@@ -15,6 +16,7 @@ class List extends React.Component {
     render() {
         return (
             <div className="ListWrap">
+                <div className="ToDoHeader">To Do:</div>
                 <ul className="Mainlist">
                     {this.props.list}
                 </ul>
@@ -86,10 +88,9 @@ class App extends React.Component {
     }
 
     MarkAsDone(e) {
-        console.log(e.target.firstChild.textcontent);
         this.setState({
             countDone: this.state.countDone + 1,
-            Donelist: [...this.state.Donelist, <div> <li onClick={this.MarkasNotdone} className="listItem DoneTask" key={"done" + this.state.countDone}><span className="TaskText">{e.target.firstChild.innerHTML}</span><button className="removeBtn" onClick={this.DeleteDoneTask}>x</button></li></div >]
+            Donelist: [...this.state.Donelist, <li onClick={this.MarkasNotdone} className="listItem DoneTask" key={this.state.countDone}><span className="TaskText">{e.target.firstChild.innerHTML}</span><button className="removeBtn" onClick={this.DeleteDoneTask}>x</button></li>]
         });
         e.target.remove();
     }
@@ -98,7 +99,7 @@ class App extends React.Component {
     AddTask(newTask) {
 
         this.setState({
-            List: [...this.state.List, <div><li onClick={this.MarkAsDone} className="listItem" key={this.state.count}><span className="TaskText">{newTask}</span><button className="removeBtn" onClick={this.DeleteTask}>x</button></li></div>],
+            List: [...this.state.List, <div className="ListItemW"><li onClick={this.MarkAsDone} className="listItem" key={this.state.count}><span className="TaskText">{newTask}</span><button className="removeBtn" onClick={this.DeleteTask}>x</button></li> </div>],
             count: this.state.count + 1
         });
 
